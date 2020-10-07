@@ -10,10 +10,8 @@ RUN \
 # Install Python
 RUN apt-add-repository universe && apt-get update && apt-get install -y \
     software-properties-common \
-    python-pip \
     python \
-    python-dev \
-    python-virtualenv && \
+    python-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # Install PySpark
