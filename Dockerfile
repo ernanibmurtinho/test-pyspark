@@ -9,8 +9,11 @@ RUN \
 
 # Install Python
 RUN \
+    apt-get install software-properties-common && \
+    apt-add-repository universe && \
     apt-get update && \
-    apt-get install -y python python-dev python-pip python-virtualenv && \
+    apt-get install python-pip && \
+    apt-get install -y python python-dev python-virtualenv && \
     rm -rf /var/lib/apt/lists/*
 
 # Install PySpark
